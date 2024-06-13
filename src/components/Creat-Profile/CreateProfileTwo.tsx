@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import airbnb from "../../assets/airbnb logo.svg"
 import ButtonTwo from '../Button/ButtonTwo'
 import { Link } from "react-router-dom";

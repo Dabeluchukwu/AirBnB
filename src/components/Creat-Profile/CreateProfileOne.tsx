@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import airbnb from "../../assets/airbnb logo.svg";
 import right from "../../assets/chevron-right.svg";
 import ButtonOne from "../Button/ButtonOne";

@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { Link } from 'react-router-dom'
 import left from "../../assets/chevron-left.svg"
 import { useState } from 'react';
@@ -24,7 +24,7 @@ function FinishSigninOne() {
          <div className='h-[50px] w-[full] flex gap-[250px] border-b-[3px] items-center'>
 
         
-         <Link to="/login"> <img src={left} alt="" /> </Link>
+         {/* <Link to="/login"> <img src={left} alt="" /> </Link> */}
             <p className='font-bold text-black'>Finish signing up</p>
          </div>
 

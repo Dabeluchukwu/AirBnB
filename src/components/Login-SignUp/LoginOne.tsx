@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import DownIcon from "../../assets/Icon and link.svg"
 import ButtonOne from '../Button/ButtonOne'
 import ImgWord from '../Button/ImgWord'

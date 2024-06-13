@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { Link } from 'react-router-dom'
 import ButtonOne from '../Button/ButtonOne'
 import ImgWord from '../Button/ImgWord'

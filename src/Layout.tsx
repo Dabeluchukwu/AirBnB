@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import NavBar from './components/NavBar/NavBar'
 import FooterMain from './components/Footer/FooterMain'
 import Frame from "../src/assets/Frame.svg"

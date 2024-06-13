@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import frame from "../../assets/FrameSmall.svg"
 import { Link } from "react-router-dom";
 

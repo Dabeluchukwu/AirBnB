@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import HomeNav from '../Home-loggedOut/HomeNav/HomeNav'
 import HomeView from '../Home-loggedOut/HomeView/HomeView'
 import HomeFooter from '../Home-loggedOut/HomeFooter/HomeFooter'

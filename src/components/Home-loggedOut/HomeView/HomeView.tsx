@@ -20,7 +20,7 @@ import imageNineteen from "../../../assets/airbnb images/IMG-19.jpg"
 import imageTwenty from "../../../assets/airbnb images/IMG-20.jpg"
 import StarIcon from "../../../assets/Ratings.svg"
 import LoveIcon from "../../../assets/Like icon.svg"
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 

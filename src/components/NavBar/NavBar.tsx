@@ -1,5 +1,5 @@
 import { GlobeIcon, SearchIcon } from 'lucide-react'
-import React from 'react'
+// import React from 'react'
 import AirbnbIcon from "../../assets/Vector.svg"
 import Dropdown from '../Hamburger/Dropdown'
 
