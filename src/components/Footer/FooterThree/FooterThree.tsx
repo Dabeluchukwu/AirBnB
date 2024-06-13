@@ -1,8 +1,7 @@
-import { FacebookIcon, GlobeIcon, InstagramIcon, PoundSterlingIcon, TwitchIcon } from 'lucide-react'
+import {GlobeIcon, PoundSterlingIcon,  } from 'lucide-react'
 import React, { useEffect } from "react";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import Frame from "../../../assets/Frame.svg"
 import FbIcon from "../../../assets/Facebook.svg"
 import TwIcon from "../../../assets/Twitter.svg"
 import IgIcon from "../../../assets/Instagram.svg"
