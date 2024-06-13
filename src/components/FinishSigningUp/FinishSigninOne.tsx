@@ -1,6 +1,5 @@
 // import React from 'react'
 import { Link } from 'react-router-dom'
-import left from "../../assets/chevron-left.svg"
 import { useState } from 'react';
 import ButtonOne from '../Button/ButtonOne';
 

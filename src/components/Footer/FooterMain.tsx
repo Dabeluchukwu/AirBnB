@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import FooterOne from './FooterOne/FooterOne'
 import FooterTwo from './FooterTwo/FooterTwo'
 import FooterThree from './FooterThree/FooterThree'
