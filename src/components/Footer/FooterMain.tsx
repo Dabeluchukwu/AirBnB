@@ -1,7 +1,8 @@
 import React from 'react'
 import FooterOne from './FooterOne/FooterOne'
-import FooterTwo from './FooterTwo.tsx/FooterTwo'
+import FooterTwo from './FooterTwo/FooterTwo'
 import FooterThree from './FooterThree/FooterThree'
+
 
 function FooterMain() {
   return (
@@ -9,8 +10,8 @@ function FooterMain() {
         <FooterOne />
         <hr />
         <FooterTwo />
-        <hr />
         <FooterThree />
+        
     </div>
   )
 }

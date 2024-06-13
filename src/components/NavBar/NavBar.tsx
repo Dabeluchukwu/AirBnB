@@ -1,12 +1,14 @@
-import { GlobeIcon, MenuIcon, SearchIcon, UserSearchIcon } from 'lucide-react'
+import { GlobeIcon, SearchIcon } from 'lucide-react'
 import React from 'react'
+import AirbnbIcon from "../../assets/Vector.svg"
 import Dropdown from '../Hamburger/Dropdown'
 
 function NavBar() {
   return (
     <div className='flex justify-between h-[50px] w-full pt-[10px] pb-[50px]'>
 
-           <div><p className='text-red-400 text-3xl'>airbnb</p></div>
+           {/* <div><p className='text-red-400 text-3xl'>airbnb</p></div> */}
+           <div><img src={AirbnbIcon} alt="" /></div>
 
             <div className='flex justify-center pt-[5px] gap-[10px] h-[40px] w-[350px] rounded-[30px] border-solid border-2 border-black '>
                 <div className='border-r-[2px]  border-black'><p>Anywhere</p></div>
@@ -19,7 +21,7 @@ function NavBar() {
                     </form>
                     
                 </div>
-                <div className='h-[full] w-[full] rounded-[50px] bg-red-400'><SearchIcon /></div>
+                <div className='h-[25px] w-[25px] rounded-[50px] bg-red-400 pt-[5px]'><SearchIcon className='h-[15px]' /></div>
             </div>
 
             <div className='flex gap-[10px] pt-[10px]'>
@@ -27,7 +29,8 @@ function NavBar() {
               <div><GlobeIcon /></div>
             </div>
 
-          <Dropdown />
+           <Dropdown />
+          
        
     </div>
     

@@ -1,4 +1,3 @@
-import React from 'react'
 import imageOne from "../../../assets/airbnb images/IMG-1.jpeg"
 import imageTwo from "../../../assets/airbnb images/IMG-2.jpg"
 import imageThree from "../../../assets/airbnb images/IMG-3.jpeg"
@@ -19,9 +18,19 @@ import imageSeventeen from "../../../assets/airbnb images/IMG-17.jpg"
 import imageEighteen from "../../../assets/airbnb images/IMG-18.jpg"
 import imageNineteen from "../../../assets/airbnb images/IMG-19.jpg"
 import imageTwenty from "../../../assets/airbnb images/IMG-20.jpg"
+import StarIcon from "../../../assets/Ratings.svg"
+import LoveIcon from "../../../assets/Like icon.svg"
+import React, { useEffect } from "react";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 
 function HomeView() {
+  useEffect(()=> {
+    AOS.init({ duration: 2000,
+      once: false
+     });
+   }, []);
   const HomeImage = [
     {
       img : imageOne ,
@@ -228,13 +237,14 @@ function HomeView() {
   return (
     <div className='flex flex-wrap gap-[50px] justify-center flex-rows-4 flex-col-5'>
         
-         {HomeImage.map((items) => (
-          <div>
-            <div><img src={items.img} alt={items.alt} className='h-[250px] w-[250px] rounded-[10px]' /></div>  <p className='pl-[200px] font-bold'>{items.rating}</p>
-            <p className='font-bold'>{items.title}</p>
-            <p>{items.description}</p>
-            <p>{items.date}</p>
-            <p className='underline decoration-solid'>{items.price}</p>
+         {HomeImage.map((items, i) => (
+          <div key={i}>
+            <div className='relative'><img src={LoveIcon} className='absolute pt-[20px] pl-[200px]' />
+            <img src={items.img} alt={items.alt} className='h-[250px] w-[250px] rounded-[10px] ' data-aos="fade-down" /></div>  <p className='pl-[200px] font-bold flex' data-aos="fade-right"><img src={StarIcon}  />{items.rating}</p>
+            <p className='font-bold'data-aos="fade-up">{items.title}</p>
+            <p data-aos="fade-down">{items.description}</p>
+            <p data-aos="fade-up">{items.date}</p>
+            <p className='underline decoration-solid' data-aos="fade-down">{items.price}</p>
            
           </div>
          ))}
