@@ -4,9 +4,17 @@ import { useState } from 'react';
 import left from "../../assets/chevron-left.svg"
 import ButtonOne from '../Button/ButtonOne';
 import good from "../../assets/check.svg"
+import { useEffect } from "react";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 
 function FinishSigningThree() {
+   useEffect(()=> {
+      AOS.init({ duration: 2000,
+        once: false
+       });
+     }, []);
      //   this two useState is for password input form, to toogle visibility
      const [passwordVisible, setPasswordVisible] = useState(false);
      const [password, setPassword] = useState('');
@@ -21,12 +29,12 @@ function FinishSigningThree() {
 
 <div className='container mx-auto px-4 bg-white text-slate-400 h-[800px] w-[700px]'>
 
-<div className='h-[50px] w-[full] flex gap-[250px] border-b-[3px] items-center'>
+<div className='h-[50px] w-[full] flex gap-[250px] border-b-[3px] items-center'data-aos="fade-down">
 
  
    <Link to="/finish-signup-two"> <img src={left} alt="" /> </Link>
 
-   <p className='font-bold text-black'>Finish signing up</p>
+   <p className='font-bold text-black'data-aos="fade-down">Finish signing up</p>
 </div>
 
 
@@ -40,7 +48,7 @@ function FinishSigningThree() {
    </form>
  </div>
 
- <div className='h-[60px] w-[650px] border-[3px] border-solid px-4 pt-[5px] border-t-[0] rounded-br-[20px] rounded-bl-[20px] flex items-center'>
+ <div className='h-[60px] w-[650px] border-[3px] border-solid px-4 pt-[5px] border-t-[0] rounded-br-[20px] rounded-bl-[20px] flex items-center'data-aos="fade-down">
  <form action="">
        <label htmlFor="password">
            <input type="password"
@@ -50,10 +58,10 @@ function FinishSigningThree() {
    </form> 
  </div>
 
- <p className='pt-[10px] text-slate-400'>Make sure it matches the name on your government ID.</p>
+ <p className='pt-[10px] text-slate-400'data-aos="fade-down">Make sure it matches the name on your government ID.</p>
 
  
- <div className='h-[60px] w-[650px] border-[3px] border-solid px-4 rounded-[20px] flex items-center mt-[20px]'>
+ <div className='h-[60px] w-[650px] border-[3px] border-solid px-4 rounded-[20px] flex items-center mt-[20px]'data-aos="fade-down">
       <form action="">
             <label htmlFor="Birthday">
             <input type="Number"
@@ -63,10 +71,10 @@ function FinishSigningThree() {
       </form> 
  </div>
 
- <p className='pt-[10px]'>To sign up, you need to be at least 18. Your birthday won't be shared with other people who use AirBnB</p>
+ <p className='pt-[10px]'data-aos="fade-down">To sign up, you need to be at least 18. Your birthday won't be shared with other people who use AirBnB</p>
 
 
- <div className='h-[60px] w-[650px] border-[3px] border-solid px-4 rounded-[20px] flex items-center mt-[20px]'>
+ <div className='h-[60px] w-[650px] border-[3px] border-solid px-4 rounded-[20px] flex items-center mt-[20px]'data-aos="fade-down">
       <form action="">
             <label htmlFor="Email">
             <input type="Email"
@@ -76,12 +84,12 @@ function FinishSigningThree() {
       </form> 
  </div>
 
- <p className='pt-[10px]'> We'll email you trip confirmation and receipts</p>
+ <p className='pt-[10px]'data-aos="fade-down"> We'll email you trip confirmation and receipts</p>
 
 
             {/* password input form */}
         <div>
-           <div className='h-[60px] w-[650px] border-[3px] border-solid px-4 rounded-[20px] flex items-center mt-[30px] justify-between'>
+           <div className='h-[60px] w-[650px] border-[3px] border-solid px-4 rounded-[20px] flex items-center mt-[30px] justify-between'data-aos="fade-down">
              <input 
                type={passwordVisible ? "text" : "password"} 
                value={password} 
@@ -99,7 +107,7 @@ function FinishSigningThree() {
 
         <div className='pt-[10px]'>
            
-          <div className='flex gap-[10px]'>
+          <div className='flex gap-[10px]'data-aos="fade-down">
              <p className='flex items-center pt-[5px]'><img src={good} alt="" /></p>
              <p className='text-sm text-green-600'>Password strength: strong</p>
           </div>

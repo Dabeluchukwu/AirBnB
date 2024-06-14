@@ -23,6 +23,14 @@ import LoveIcon from "../../../assets/Like icon.svg"
 import { useEffect } from "react";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Pagination,Autoplay, Scrollbar } from "swiper/modules"
+import "swiper/css"
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/autoplay";
+import "swiper/swiper-bundle.css";
 
 
 function HomeView() {
@@ -34,6 +42,9 @@ function HomeView() {
   const HomeImage = [
     {
       img : imageOne ,
+      imgg : imageFour,
+      imggg : imageNine,
+      imgggg :imageEight ,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -44,6 +55,9 @@ function HomeView() {
     },
     {
       img : imageTwo ,
+      imgg : imageSeven ,
+      imggg :imageTen ,
+      imgggg : imageThree,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -54,6 +68,9 @@ function HomeView() {
     },
     {
       img : imageThree  ,
+      imgg :imageEighteen ,
+      imggg : imageEight,
+      imgggg : imageFiveteen,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -64,6 +81,9 @@ function HomeView() {
     },
     {
       img :  imageFour,
+      imgg : imageNine ,
+      imggg :imageSeven ,
+      imgggg : imageOne,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -74,6 +94,9 @@ function HomeView() {
     },
     {
       img :  imageFive,
+      imgg : imageEight,
+      imggg : imageNine,
+      imgggg :imageFive ,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -84,6 +107,9 @@ function HomeView() {
     },
     {
       img :  imageSix,
+      imgg : imageEight,
+      imggg :imageFiveteen ,
+      imgggg :imageTwenty ,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -94,6 +120,9 @@ function HomeView() {
     },
     {
       img :  imageSeven,
+      imgg : imageFour ,
+      imggg : imageNine,
+      imgggg : imageFourteen,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -104,6 +133,9 @@ function HomeView() {
     },
     {
       img :  imageEight,
+      imgg : imageFour,
+      imggg : imageNine,
+      imgggg :imageEight ,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -114,6 +146,9 @@ function HomeView() {
     },
     {
       img :  imageNine,
+      imgg : imageFour ,
+      imggg : imageNine,
+      imgggg : imageFourteen,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -124,6 +159,9 @@ function HomeView() {
     },
     {
       img :  imageTen,
+      imgg :imageEighteen ,
+      imggg : imageEight,
+      imgggg : imageFiveteen,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -134,6 +172,9 @@ function HomeView() {
     },
     {
       img :  imageEleven,
+      imgg : imageFour,
+      imggg : imageNine,
+      imgggg :imageEight ,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -144,6 +185,9 @@ function HomeView() {
     },
     {
       img :  imageTwelve,
+      imgg : imageNine ,
+      imggg :imageSeven ,
+      imgggg : imageOne,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -154,6 +198,9 @@ function HomeView() {
     },
     {
       img :  imageThirteen,
+      imgg : imageSeven ,
+      imggg :imageTen ,
+      imgggg : imageThree,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -164,6 +211,9 @@ function HomeView() {
     },
     {
       img :  imageFourteen,
+      imgg : imageFive,
+      imggg : imageFour,
+      imgggg : imageNineteen,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -174,6 +224,9 @@ function HomeView() {
     },
     {
       img :  imageFiveteen,
+      imgg : imageEight,
+      imggg : imageNine,
+      imgggg :imageFive ,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -184,6 +237,9 @@ function HomeView() {
     },
     {
       img :  imageSixteen,
+      imgg : imageSeventeen,
+      imggg : imageEight,
+      imgggg :imageEleven ,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -194,6 +250,9 @@ function HomeView() {
     },
     {
       img :  imageSeventeen,
+      imgg : imageNine ,
+      imggg :imageSeven ,
+      imgggg : imageOne,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -204,6 +263,9 @@ function HomeView() {
     },
     {
       img :  imageEighteen,
+      imgg : imageFour ,
+      imggg : imageNine,
+      imgggg : imageFourteen,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -214,6 +276,9 @@ function HomeView() {
     },
     {
       img :  imageNineteen,
+      imgg : imageEight,
+      imggg :imageFiveteen ,
+      imgggg :imageTwenty ,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -224,6 +289,9 @@ function HomeView() {
     },
     {
       img :  imageTwenty,
+      imgg :imageEighteen ,
+      imggg : imageEight,
+      imgggg : imageFiveteen,
       alt : "airBnB Images",
       title : "Half Moon Bay, California, US",
       description : "Beach and Ocean views",
@@ -235,12 +303,36 @@ function HomeView() {
 
   ]
   return (
-    <div className='flex flex-wrap gap-[50px] justify-center flex-rows-4 flex-col-5'>
+    <div className='grid grid-cols-4 gap-[50px] justify-center'>
         
          {HomeImage.map((items, i) => (
           <div key={i}>
-            <div className='relative'><img src={LoveIcon} className='absolute pt-[20px] pl-[200px]' />
-            <img src={items.img} alt={items.alt} className='h-[250px] w-[250px] rounded-[10px] ' data-aos="fade-down" /></div>  <p className='pl-[200px] font-bold flex' data-aos="fade-right"><img src={StarIcon}  />{items.rating}</p>
+
+            {/* z-10 is for making the LoveIcon to show */}
+            <div className='relative'><img src={LoveIcon} className='absolute pt-[20px] pl-[200px] z-10' />
+
+            <Swiper
+            modules={[Navigation, Pagination, Scrollbar,Autoplay]} 
+            spaceBetween={0}
+            slidesPerView={1}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={() => console.log(Swiper)}
+            pagination= {{clickable:true}}
+            scrollbar= {{draggable:true}}
+            autoplay= {{delay:1000}}
+
+            >
+
+  <SwiperSlide> <img src={items.img} alt={items.alt} className='h-[250px] w-[250px] rounded-[10px] ' data-aos="fade-down" /> </SwiperSlide>
+  <SwiperSlide> <img src={items.imgg} alt={items.alt} className='h-[250px] w-[250px] rounded-[10px] ' data-aos="fade-down" /> </SwiperSlide>
+  <SwiperSlide> <img src={items.imggg} alt={items.alt} className='h-[250px] w-[250px] rounded-[10px] ' data-aos="fade-down" /> </SwiperSlide>
+  <SwiperSlide> <img src={items.imgggg} alt={items.alt} className='h-[250px] w-[250px] rounded-[10px] ' data-aos="fade-down" /> </SwiperSlide>
+
+
+            </Swiper>
+            
+            </div>
+            <p className='pl-[200px] font-bold flex' data-aos="fade-right"><img src={StarIcon}  />{items.rating}</p>
             <p className='font-bold'data-aos="fade-up">{items.title}</p>
             <p data-aos="fade-down">{items.description}</p>
             <p data-aos="fade-up">{items.date}</p>
